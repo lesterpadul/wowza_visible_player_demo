@@ -30,43 +30,48 @@ $streamAlias = $_GET['streamAlias'];
 			nokey: "U2FsdGVkX1+ORRukPNvKElPumZx/TAhPZoZ0+9ZEGG4=",
 			events: {
 				onReady: function() {
-					console.warn("player is ready");
+					reportStatus("on_ready");
 				},
 				onPlay: function() {
-					console.warn("player playing");
+					reportStatus("on_play");
 
 				},
 				onPause: function() {
-					console.warn("player paused");
+					reportStatus("on_pause");
 
 				},
 				onSeek: function(time) {
-					console.warn("player is seeking");
+					reportStatus("on_seek");
 
 				},
 				onStop: function(evt) {
-					console.warn("player stopped");
+					reportStatus("on_stop");
 
 				},
 				onVolumeUpdate: function(evt) {
-					console.warn("player volume updated");
+					reportStatus("on_vol_update");
 
 				},
 				onTimeUpdate: function(evt) {
-					console.warn("player updated");
+					reportStatus("on_time_update");
 
 				},
 				onEnded: function() {
-					console.warn("player has ended");
+					reportStatus("on_ended");
 
 				},
 				onVolumeUpdate: function() {
-					console.warn("volume was updated")
+					reportStatus("volume_update");
 				}
 			}
 		});
 		player.attachTo(document.getElementById("player"));
 	});
+
+	// MARK: report status
+	function reportStatus(status){
+		window.location = 'player.app.com://localhost?status=' + status
+	}
 </script>
 </body>
 </html>
