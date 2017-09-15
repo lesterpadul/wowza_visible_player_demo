@@ -70,6 +70,7 @@ $streamAlias = $_GET['streamAlias'];
 
 	// MARK: report status
 	function reportStatus(status){
+		console.warn("CURRENT STATUS IS : " + status);
 		window.location = 'player.app.com://localhost?status=' + status
 	}
 </script>
