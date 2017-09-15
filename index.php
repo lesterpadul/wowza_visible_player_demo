@@ -30,7 +30,7 @@ $streamAlias = $_GET['streamAlias'];
 			nokey: "U2FsdGVkX1+ORRukPNvKElPumZx/TAhPZoZ0+9ZEGG4=",
 			events: {
 				onReady: function() {
-					reportStatus("on_ready");
+					reportStatus("ready");
 				},
 				onPlay: function() {
 					reportStatus("on_play");
@@ -53,7 +53,7 @@ $streamAlias = $_GET['streamAlias'];
 
 				},
 				onTimeUpdate: function(evt) {
-					reportStatus("on_time_update");
+					reportStatus("playing");
 
 				},
 				onEnded: function() {
