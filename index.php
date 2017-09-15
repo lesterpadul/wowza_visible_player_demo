@@ -62,6 +62,9 @@ $streamAlias = $_GET['streamAlias'];
 				},
 				onVolumeUpdate: function() {
 					reportStatus("volume_update");
+				},
+				onError: function(){
+					reportStatus("error");
 				}
 			}
 		});
