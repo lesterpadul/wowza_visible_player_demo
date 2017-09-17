@@ -69,6 +69,10 @@ $streamAlias = $_GET['streamAlias'];
 			}
 		});
 		player.attachTo(document.getElementById("player"));
+		setTimeout(function(){
+			reportStatus("can_play_video");
+			player.play();
+		}, 2000);
 	});
 
 	// MARK: report status
