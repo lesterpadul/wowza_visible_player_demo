@@ -72,7 +72,7 @@ $streamAlias = $_GET['streamAlias'];
 		setTimeout(function(){
 			reportStatus("can_play_video");
 			player.play();
-		}, 2000);
+		}, 500);
 	});
 
 	// MARK: report status
